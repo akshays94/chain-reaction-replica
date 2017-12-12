@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="x-ua-compatible" content="ie=edge">
+		<title>Chain Reaction</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="assets/styles/css/home.css">
+	</head>
+
+	<body>
+		<div class="header">
+			<div class="container">
+				<div class="text"><span class="pink"><b>C</b>hain</span> <span class="blue"><b>R</b>eaction</span></div>
+			</div>
+		</div>
+
+		<div class="content">
+
+			<div class="configuration">
+				<div class="container">
+					<label for="">Rows</label>
+					<input type="text" name="rows" placeholder="Enter rows">
+				</div>
+				<div class="container">
+					<label for="">Columns</label>
+					<input type="text" name="columns" placeholder="Enter columns">
+				</div>
+				<div class="container">
+					<label for="">Players</label>
+					<input type="text" name="players" placeholder="Enter players">
+				</div>
+
+				<div class="container">
+					<label for="">Split Criteria</label>
+					<ul>
+						<li>
+							<input type="radio" name="split-criteria" value="non-diagonal" checked="checked">
+								Non-diagonal Split
+							</input>
+						</li>
+						<li>
+							<input type="radio" name="split-criteria" value="diagonal">
+								Diagonal Split
+							</input>
+						</li>
+						<li>
+							<input type="radio" name="split-criteria" value="all">
+								All Side Split
+							</input>
+						</li>
+					</ul>
+				</div>
+				<div class="container">
+					<input type="button" name="newgame" value="New Game">
+				</div>
+			</div>
+
+			<hr>
+			<div class="whos-chance hide"></div>
+			<div class="playground-container">
+				<div class="playground"></div>
+			</div>
+		</div>
+		<div class="footer">
+			<div class="container">
+				<div class="text">
+					<b>Developed By</b> | Akshay Suresh
+				</div>
+				<a href="https://www.linkedin.com/in/akshaysuresh94" target="_blank">www.linkedin.com/in/akshaysuresh94</a>
+			</div>
+			<div class="container">
+				<div class="text">
+					<b>Originally Developed By</b> | Buddy-Matt Entertainment
+				</div>
+				<a href="https://play.google.com/store/apps/details?id=com.BuddyMattEnt.ChainReaction&hl=en" target="_blank">Download Original Game</a>
+			</div>
+		</div>
+	</body>
+
+	<script src="assets/js/home.js"></script>
+
+</html>

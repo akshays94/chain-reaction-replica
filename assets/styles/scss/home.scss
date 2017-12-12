@@ -1,0 +1,274 @@
+$font-stack	: 'Ubuntu', sans-serif;
+
+$gap : 24px;
+
+$white 			: #fff;
+$lightestgray 	: #efefef;
+$darkestgray 	: #1D1F20;
+$medgray     	: #5F5F5F;
+
+$pink			: #FF4F79;
+$lightblue		: #87F5FB;
+
+html, body {
+	margin: 0;
+	background-color: $lightestgray;
+	font-family: $font-stack; 
+	
+	.header {
+		display: flex;
+		justify-content: center;
+		
+		margin-bottom: $gap;
+		padding: $gap $gap*1.5;
+		background-color: $darkestgray;
+		box-shadow: 0 5px 8px -2px $medgray;
+
+		.container {
+			div.text {
+				font-size: 2em;
+				font-weight: lighter;
+				word-spacing: 5px;
+				letter-spacing: 1px;
+				color: $lightestgray;
+				text-transform: uppercase;
+
+				span.pink {
+					color: $pink;
+				}
+				span.blue {
+					color: $lightblue;
+				}
+			}			
+		}
+	}
+
+	
+	.content {
+
+		width: 80%;
+		margin: 0 auto;
+		min-height: 90vh;
+		padding: $gap/2;
+		margin-bottom: $gap; 
+
+		.configuration {
+
+			display: flex;
+			flex-wrap: wrap;
+			align-items: center;	
+
+			.container {
+				display: flex;
+				flex-direction: column;
+				flex-grow: 1;
+				padding: $gap/2;
+				
+				label {
+					color: $pink;
+					margin-bottom: $gap/2.5;
+				}
+
+				input[type=text] {
+					
+					border: none;
+					font-size: 1em;
+					padding: $gap/2;
+					font-weight: lighter;
+					font-family: $font-stack;
+					background-color: $lightestgray;
+					border-bottom: 1px dashed $pink;
+					transition: all 200ms ease-in-out;
+
+					&:focus {
+						outline: none;
+						border-bottom: 1px solid $pink;
+					}
+				}
+
+				input[type=button] {
+					
+					width: 200px;
+					border: none;
+					outline: none;
+					color: $white;
+					margin: 0 auto;
+					font-size: 1em;
+					padding: $gap/2;
+					cursor: pointer;
+					border-radius: 5px;
+					font-weight: lighter;
+					background-color: $pink;
+					transition: all 0.25s ease-in-out;
+					box-shadow: 0px 16px 7px -13px gray;
+
+					@media (max-width:801px)  {
+						width: 100%;	
+					}
+
+					&:hover {
+						transform: translateY(-2px);
+						box-shadow: 0px 10px 16px -6px gray;
+					}
+
+				}
+
+				ul {
+					margin: 0;
+					padding: 0;
+					list-style: none;
+
+					li {
+						font-size: 1em;
+						cursor: pointer;
+						font-weight: lighter;
+						margin-bottom: $gap/4;
+					}
+				}
+			}
+		}
+
+		
+		div.whos-chance {
+			padding: $gap/2;
+			font-weight: bold;
+			text-align: center;
+			margin: 0 auto;
+			margin-bottom: $gap;
+			text-shadow: 1px 1px $medgray;
+			
+			&.hide {
+				display: none;
+			}
+		}
+
+		div.playground-container {
+			
+			display: flex;	
+			justify-content: center;
+
+			div.playground {
+				
+				color: white;
+				display: flex;
+				flex-wrap: wrap;
+				font-weight: bold;
+				font-family: $font-stack;
+				background-color: pink;	
+
+				&.freeze {
+					pointer-events: none;
+				}	
+
+				.box {
+					display: flex;
+					align-items: center;
+					justify-content: center;
+
+					width: 50px;
+					height: 50px;
+					cursor: pointer;
+					user-select: none;
+					box-sizing: border-box;
+					border: 1px solid $medgray;
+					background-color: $darkestgray;
+					transition: all 100ms ease-in-out;
+
+					&:hover {
+						background-color: rgba($darkestgray, 0.75);
+					}
+
+					.atom-container {
+						width: 40px;
+						height: 40px;
+						display: flex;
+						flex-wrap: wrap;
+						align-items: center;
+						justify-content: center;
+
+						&.two {
+							animation: rotate 2s linear infinite;
+						}
+
+						&.three {
+							animation: rotate 1s linear infinite;
+						}
+
+						&.one {
+							animation: rotate 3s linear infinite;
+							.atom {
+								animation: shiver 0.1s linear infinite;
+							}
+						}
+
+						.atom {
+							margin: 0;
+							width: 20px;
+							height: 20px;
+							border-radius: 50%;
+
+						}
+					}
+				}
+			}			
+		}
+	}
+
+	.footer { 
+
+		display: flex;
+		justify-content: space-between;
+				
+		@media (max-width:801px)  {
+			flex-direction: column;	
+			.container {
+				margin-bottom: $gap;
+			}
+		}
+
+		padding: $gap $gap*3;
+		background-color: $darkestgray;
+	
+		.container {
+			
+			padding: $gap/3;
+			div.text {
+				color: $pink;
+				margin-bottom: $gap/4;
+			}
+			a {
+				color: rgba($lightblue, 0.75);
+				transition: all 200ms ease-in-out;
+
+				&:hover {
+					color: $lightblue;
+					text-decoration: none;
+				}
+			}
+		}
+	}
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  0% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes shiver {
+	10% {
+		transform: translateX(-1px); 
+	}
+	50% {
+		transform: translateY(-1px); 
+	}
+	70% {
+		transform: translateY(1px); 
+	}
+	90% {
+		transform: translateY(1px); 
+	}  
+}

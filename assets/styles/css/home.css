@@ -1,0 +1,173 @@
+html, body {
+  margin: 0;
+  background-color: #efefef;
+  font-family: "Ubuntu", sans-serif; }
+  html .header, body .header {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 24px;
+    padding: 24px 36px;
+    background-color: #1D1F20;
+    box-shadow: 0 5px 8px -2px #5F5F5F; }
+    html .header .container div.text, body .header .container div.text {
+      font-size: 2em;
+      font-weight: lighter;
+      word-spacing: 5px;
+      letter-spacing: 1px;
+      color: #efefef;
+      text-transform: uppercase; }
+      html .header .container div.text span.pink, body .header .container div.text span.pink {
+        color: #FF4F79; }
+      html .header .container div.text span.blue, body .header .container div.text span.blue {
+        color: #87F5FB; }
+  html .content, body .content {
+    width: 80%;
+    margin: 0 auto;
+    min-height: 90vh;
+    padding: 12px;
+    margin-bottom: 24px; }
+    html .content .configuration, body .content .configuration {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center; }
+      html .content .configuration .container, body .content .configuration .container {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+        padding: 12px; }
+        html .content .configuration .container label, body .content .configuration .container label {
+          color: #FF4F79;
+          margin-bottom: 9.6px; }
+        html .content .configuration .container input[type=text], body .content .configuration .container input[type=text] {
+          border: none;
+          font-size: 1em;
+          padding: 12px;
+          font-weight: lighter;
+          font-family: "Ubuntu", sans-serif;
+          background-color: #efefef;
+          border-bottom: 1px dashed #FF4F79;
+          transition: all 200ms ease-in-out; }
+          html .content .configuration .container input[type=text]:focus, body .content .configuration .container input[type=text]:focus {
+            outline: none;
+            border-bottom: 1px solid #FF4F79; }
+        html .content .configuration .container input[type=button], body .content .configuration .container input[type=button] {
+          width: 200px;
+          border: none;
+          outline: none;
+          color: #fff;
+          margin: 0 auto;
+          font-size: 1em;
+          padding: 12px;
+          cursor: pointer;
+          border-radius: 5px;
+          font-weight: lighter;
+          background-color: #FF4F79;
+          transition: all 0.25s ease-in-out;
+          box-shadow: 0px 16px 7px -13px gray; }
+          @media (max-width: 801px) {
+            html .content .configuration .container input[type=button], body .content .configuration .container input[type=button] {
+              width: 100%; } }
+          html .content .configuration .container input[type=button]:hover, body .content .configuration .container input[type=button]:hover {
+            transform: translateY(-2px);
+            box-shadow: 0px 10px 16px -6px gray; }
+        html .content .configuration .container ul, body .content .configuration .container ul {
+          margin: 0;
+          padding: 0;
+          list-style: none; }
+          html .content .configuration .container ul li, body .content .configuration .container ul li {
+            font-size: 1em;
+            cursor: pointer;
+            font-weight: lighter;
+            margin-bottom: 6px; }
+    html .content div.whos-chance, body .content div.whos-chance {
+      padding: 12px;
+      font-weight: bold;
+      text-align: center;
+      margin: 0 auto;
+      margin-bottom: 24px;
+      text-shadow: 1px 1px #5F5F5F; }
+      html .content div.whos-chance.hide, body .content div.whos-chance.hide {
+        display: none; }
+    html .content div.playground-container, body .content div.playground-container {
+      display: flex;
+      justify-content: center; }
+      html .content div.playground-container div.playground, body .content div.playground-container div.playground {
+        color: white;
+        display: flex;
+        flex-wrap: wrap;
+        font-weight: bold;
+        font-family: "Ubuntu", sans-serif;
+        background-color: pink; }
+        html .content div.playground-container div.playground.freeze, body .content div.playground-container div.playground.freeze {
+          pointer-events: none; }
+        html .content div.playground-container div.playground .box, body .content div.playground-container div.playground .box {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 50px;
+          height: 50px;
+          cursor: pointer;
+          user-select: none;
+          box-sizing: border-box;
+          border: 1px solid #5F5F5F;
+          background-color: #1D1F20;
+          transition: all 100ms ease-in-out; }
+          html .content div.playground-container div.playground .box:hover, body .content div.playground-container div.playground .box:hover {
+            background-color: rgba(29, 31, 32, 0.75); }
+          html .content div.playground-container div.playground .box .atom-container, body .content div.playground-container div.playground .box .atom-container {
+            width: 40px;
+            height: 40px;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center; }
+            html .content div.playground-container div.playground .box .atom-container.two, body .content div.playground-container div.playground .box .atom-container.two {
+              animation: rotate 2s linear infinite; }
+            html .content div.playground-container div.playground .box .atom-container.three, body .content div.playground-container div.playground .box .atom-container.three {
+              animation: rotate 1s linear infinite; }
+            html .content div.playground-container div.playground .box .atom-container.one, body .content div.playground-container div.playground .box .atom-container.one {
+              animation: rotate 3s linear infinite; }
+              html .content div.playground-container div.playground .box .atom-container.one .atom, body .content div.playground-container div.playground .box .atom-container.one .atom {
+                animation: shiver 0.1s linear infinite; }
+            html .content div.playground-container div.playground .box .atom-container .atom, body .content div.playground-container div.playground .box .atom-container .atom {
+              margin: 0;
+              width: 20px;
+              height: 20px;
+              border-radius: 50%; }
+  html .footer, body .footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 24px 72px;
+    background-color: #1D1F20; }
+    @media (max-width: 801px) {
+      html .footer, body .footer {
+        flex-direction: column; }
+        html .footer .container, body .footer .container {
+          margin-bottom: 24px; } }
+    html .footer .container, body .footer .container {
+      padding: 8px; }
+      html .footer .container div.text, body .footer .container div.text {
+        color: #FF4F79;
+        margin-bottom: 6px; }
+      html .footer .container a, body .footer .container a {
+        color: rgba(135, 245, 251, 0.75);
+        transition: all 200ms ease-in-out; }
+        html .footer .container a:hover, body .footer .container a:hover {
+          color: #87F5FB;
+          text-decoration: none; }
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg); }
+  0% {
+    transform: rotate(360deg); } }
+
+@keyframes shiver {
+  10% {
+    transform: translateX(-1px); }
+  50% {
+    transform: translateY(-1px); }
+  70% {
+    transform: translateY(1px); }
+  90% {
+    transform: translateY(1px); } }
