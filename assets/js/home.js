@@ -149,6 +149,7 @@
 	var createNewGame = function() {
 
 		var createNewGameBtn = document.querySelector("input[name=newgame]");
+		var MAX_GRID = 10
 
 		createNewGameBtn.addEventListener("click", function() {
 			
@@ -156,6 +157,18 @@
 			var columns = document.querySelector("input[name=columns]").value;
 			var players = document.querySelector("input[name=players]").value;
 				
+
+			if (rows > MAX_GRID) {
+				alert ('Rows cannot be greater than '+MAX_GRID);
+				rows = MAX_GRID;
+				document.querySelector("input[name=rows]").value = MAX_GRID;
+			}
+
+			if (columns > MAX_GRID) {
+				alert ('Columns cannot be greater than '+MAX_GRID);
+				columns = MAX_GRID;
+				document.querySelector("input[name=columns]").value = MAX_GRID;
+			} 		
 
 			if(parseInt(players) > 10) {
 				alert("Players cannot be greater than 10");
